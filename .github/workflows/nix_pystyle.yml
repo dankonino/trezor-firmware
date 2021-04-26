@@ -11,5 +11,5 @@ jobs:
       with:
         nix_path: nixpkgs=channel:nixos-unstable
     - run: nix-shell --run "echo OK"
-    - run: nix-env -iA nixos.poetry
-    - run: nix-shell --run “poetry run make pystyle_check”
+    - run: nix-shell --run "poetry install"
+    - run: nix-shell --run "poetry run make pystyle_check"
